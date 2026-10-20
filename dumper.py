@@ -31,9 +31,9 @@ def splitter(agent,base,size,max_size,error,directory):
 
         for time in range(times):
                 # logging.debug("Save bytes: "+str(cur_base)+" till "+str(hex(cur_base+max_size)))
-                dump_to_file(agent, cur_base, max_size, error, directory)
+                dump_to_file(agent, hex(cur_base), max_size, error, directory)
                 cur_base = cur_base + max_size
 
         if diff != 0:
             # logging.debug("Save bytes: "+str(hex(cur_base))+" till "+str(hex(cur_base+diff)))
-            dump_to_file(agent, cur_base, diff, error, directory)
+            dump_to_file(agent, hex(cur_base), diff, error, directory)
